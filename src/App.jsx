@@ -1,4 +1,4 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
@@ -16,8 +16,21 @@ import UpdateLifecycle from './UpdateLifecycle'
 import RenderingComponent from './components/RenderingComponent'
 import Colorful from './components/Colorful'
 import DesignComponent from './components/DesignComponent'
+import NumberIncrementer from './components/NumberIncrementer'
+import ContextAPI from './components/ContextAPI'
+import IndexPage from './RoutingComponent/IndexPage'
+import HomePage from './RoutingComponent/HomePage'
+import ProfilePage from './RoutingComponent/ProfilePage'
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
+import NavBar from './RoutingComponent/NavBar'
+import UserForm from './crud/UserForm'
+import UserTable from './crud/UserTable'
+import UserManagement from './crud/UserManagement'
+
+
+
+
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
     // <>
@@ -52,10 +65,36 @@ function App() {
     //<UpdateLifecycle/>
   // <div>  
   //   <Random />    
-  //   <Counter/>
+     //<Counter/>
   // </div>
- // <Colorful/>
-  <DesignComponent/>
+
+
+  // <>
+   <UserForm/>
+  // <UserTable/>
+  // </>
+
+  //<UserManagement/>
+
+
+  //<DesignComponent/>
+    //<NumberIncrementer/>
+  //<ContextAPI/>
+
+
+
+/* <>
+<NavBar />
+<Routes>
+  <Route path="/" element={<HomePage />}></Route>
+  <Route path="/home" element={<HomePage />}></Route>
+  <Route path="/index" element={<IndexPage  />}></Route>
+  <Route path="/profile" element={<ProfilePage />}></Route>
+</Routes>
+</> */
+
+    
+
   )
 }
 
